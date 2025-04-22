@@ -34,10 +34,10 @@
 
         .container {
             background: rgba(0, 0, 0, 0.7);
-            padding: 40px;
+            padding: 20px;
             border-radius: 20px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-            width: 80%;
+            width: 90%;
             max-width: 800px;
             transition: transform 0.3s ease;
             position: relative;
@@ -49,9 +49,9 @@
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             color: #ffb74d;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             letter-spacing: 2px;
         }
 
@@ -59,16 +59,19 @@
             display: flex;
             justify-content: space-around;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .count-item {
             background: #333;
             border-radius: 10px;
-            padding: 20px;
-            margin: 0 15px;
+            padding: 15px;
+            margin: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
             transition: background 0.3s ease, transform 0.3s ease;
+            flex: 1 1 45%;
+            max-width: 180px;
         }
 
         .count-item:hover {
@@ -167,6 +170,33 @@
             animation: fadeInText 1.5s ease-out forwards;
         }
 
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .count-item {
+                flex: 1 1 45%;
+                max-width: 120px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .message {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .count-item {
+                flex: 1 1 100%;
+                max-width: 180px;
+                margin: 5px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .message {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
